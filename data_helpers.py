@@ -1,11 +1,12 @@
 import numpy as np
 import re
 import random, csv
+from config import BASE_DIRECTORY
 
-POS_DATASET_PATH = 'twitter-sentiment-dataset/tw-data.pos'
-NEG_DATASET_PATH = 'twitter-sentiment-dataset/tw-data.neg'
-VOC_PATH = 'twitter-sentiment-dataset/vocab.csv'
-VOC_INV_PATH = 'twitter-sentiment-dataset/vocab_inv.csv'
+POS_DATASET_PATH = BASE_DIRECTORY + 'twitter-sentiment-dataset/tw-data.pos'
+NEG_DATASET_PATH = BASE_DIRECTORY + 'twitter-sentiment-dataset/tw-data.neg'
+VOC_PATH = BASE_DIRECTORY + 'twitter-sentiment-dataset/vocab.csv'
+VOC_INV_PATH = BASE_DIRECTORY + 'twitter-sentiment-dataset/vocab_inv.csv'
 
 
 def clean_str(string):

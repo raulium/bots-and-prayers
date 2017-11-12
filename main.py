@@ -62,7 +62,6 @@ def gen_post():
             i = random.randint(0,len(POS_WORDS)-1)
             if i not in nums:
                 nums.append(i)
-        print nums
         words = '#blessed ' + POS_WORDS[nums[0]] + ' ' + POS_WORDS[nums[1]] + ' ' + POS_WORDS[nums[2]]
 
     return [words, tag1, tag2, d[2]]

@@ -6,6 +6,7 @@ import os
 import time
 from tensorflow.python.framework.graph_util import convert_variables_to_constants
 from tqdm import tqdm
+from config import BASE_DIRECTORY
 
 
 def log(*string, **kwargs):
@@ -96,7 +97,7 @@ tf.flags.DEFINE_boolean('save_protobuf', False,
 tf.flags.DEFINE_boolean('evaluate_batch', False,
                         'Print the network output on a batch from the dataset '
                         '(for debugging/educational purposes')
-tf.flags.DEFINE_string('load', './output/run20171002-193316/',
+tf.flags.DEFINE_string('load', BASE_DIRECTORY + 'output/run20171002-193316/',
                        'Load a previous run from the given path (must '
                        'contain a log and checkpoint file).')
 tf.flags.DEFINE_string('device', 'cpu', 'Type of device to run the network on.'
